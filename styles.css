@@ -1,0 +1,503 @@
+
+/*  */
+/* From Uiverse.io by tako143 */ 
+body{
+
+        width: 100%;
+        /* height: 100%; */
+        /* Add your background pattern here */
+        background: linear-gradient(
+          -45deg,
+          #646560,
+          #646560,
+          #11120e,
+          #11120e,
+          #a1a19c,
+          #a1a19c
+        );
+        background-size: 1200% 1200%;
+        animation: gradient 30s ease infinite;
+        height: 800%;
+}
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        25% {
+          background-position: 50% 100%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        75% {
+          background-position: 50% 0%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      
+
+
+/* Contenedor principal */
+.container-flower {
+    width: 100%;
+    max-width: 500px; /* Evita que el contenedor crezca demasiado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0 100px ;
+}
+
+/* Encabezado */
+h2 {
+    font-size: 24px;
+    color: #ff4081;
+    margin-bottom: 15px;
+}
+
+/* Botón */
+.btn-action {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #e91e63;
+}
+
+/* Ajustes de la flor */
+.flower {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+}
+.petal {
+    position: absolute;
+    width: 130px;
+    height: 240px;
+    background: linear-gradient(180deg, #c0cfd6, #2e6fa0);
+    border-radius: 50%;
+}
+  
+  .petal1 {
+    transform: rotate(0deg) translateY(-50%);
+    animation-delay: 0.1s;
+  }
+  
+  .petal2 {
+    transform: rotate(45deg) translateY(-50%);
+    animation-delay: 0.2s;
+  }
+  
+  .petal3 {
+    transform: rotate(90deg) translateY(-50%);
+    animation-delay: 0.3s;
+  }
+  
+  .petal4 {
+    transform: rotate(135deg) translateY(-50%);
+    animation-delay: 0.4s;
+  }
+  
+  .petal5 {
+    transform: rotate(180deg) translateY(-50%);
+    animation-delay: 0.5s;
+  }
+  
+  .petal6 {
+    transform: rotate(225deg) translateY(-50%);
+    animation-delay: 0.6s;
+  }
+  
+  .petal7 {
+    transform: rotate(270deg) translateY(-50%);
+    animation-delay: 0.7s;
+  }
+  
+  .petal8 {
+    transform: rotate(315deg) translateY(-50%);
+    animation-delay: 0.8s;
+  }
+  
+  .center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f1d2d2;
+    border-radius: 50%;
+  }
+  
+  .flower:hover .petal {
+    animation-name: changeColor;
+    animation-duration: 8s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+  }
+  
+  .flower:hover {
+    animation-name: rotateFlower;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes changeColor {
+    0% {
+        background: linear-gradient(180deg, #DBECF4, #91aec4);
+    }
+    25% {
+        background: linear-gradient(180deg, #c0cfd6, #2e6fa0);
+    }
+    50% {
+      background: linear-gradient(180deg, #ddcdcd, #fffb0b);
+    }
+    75% {
+      background: linear-gradient(180deg, #f7d6d6, #fd6a6a);
+    }
+    100% {
+      background: linear-gradient(180deg, #fcd3fc, #e844f7);
+    }
+  }
+  
+  @keyframes rotateFlower {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.5) rotate(360deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container-flower {
+        width: 100%;
+        max-width: 400px; /* Evita que el contenedor crezca demasiado */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .petal {
+        width: 70px;
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .btn-action {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .container-flower {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .btn-action {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+@media screen and (min-width: 700px) {
+    .container-flower {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .btn-action {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+
+  /*
+  .
+  .
+  .
+  .
+  */
+
+
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 50vw;
+    height: 50vw;
+    border: 2px solid black;
+    position: relative;
+    margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+    #puzzle-container {
+        width: 90vw;
+        height: 60vh;
+    }
+    #buttons {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button, input {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+.piece {
+    width: 100%;
+    height: 100%;
+    background-size: 500% 500%;
+    border: 0.5px solid #ccc;
+    cursor: pointer;
+}
+
+#buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+button, input {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    width: 90%;
+    max-width: 300px;
+}
+/* From Uiverse.io by MuhammadHasann */ 
+button {
+    position: relative;
+    padding: 15px 45px;
+    background: #fec195;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    cursor: pointer;
+    border: 1px solid #fec195;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  }
+  
+  button:hover {
+    border: 1px solid #f3b182;
+    background: linear-gradient(
+      85deg,
+      #fec195,
+      #fcc196,
+      #fabd92,
+      #fac097,
+      #fac39c
+    );
+    animation: wind 2s ease-in-out infinite;
+  }
+  
+  @keyframes wind {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    0% {
+      background-position: 50% 100%;
+    }
+  
+    0% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .icon-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    transform-origin: 0 0;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+  }
+  
+  button:hover .icon-1 {
+    animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+    transform: rotate(10deg);
+  }
+  
+  @keyframes slay-1 {
+    0% {
+      transform: rotate(10deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  .icon-2 {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 12px;
+    transform-origin: 50% 0;
+    transform: rotate(10deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  }
+  
+  button:hover .icon-2 {
+    animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+  
+  @keyframes slay-2 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(15deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  .icon-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    transform-origin: 50% 0;
+    transform: rotate(-5deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  }
+  
+  button:hover .icon-3 {
+    animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+  
+  @keyframes slay-3 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  /* From Uiverse.io by cssbuttons-io */ 
+  .btn-action {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   .btn-action::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   .btn-action:hover {
+    
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    border: 1px solid rgb(217, 176, 255);
+    background: linear-gradient(
+      85deg,
+      rgb(217, 176, 255),
+      rgb(217, 176, 255),
+      rgb(217, 176, 255),
+      rgb(217, 176, 255),
+      rgb(217, 176, 255)
+    );
+   }
+   
+   .btn-action:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+   
